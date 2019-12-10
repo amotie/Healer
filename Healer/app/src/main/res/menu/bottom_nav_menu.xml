@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationDoctor"
+        android:icon="@drawable/finddoctor"
+        android:title="Doctor" />
+
+    <item
+        android:id="@+id/navigationMedicine"
+        android:icon="@drawable/mediceneicon"
+        android:title="Medicine" />
+
+    <item
+        android:id="@+id/navigationHospital"
+        android:icon="@drawable/hospitalicon"
+        android:title="Hospital" />
+
+    <item
+        android:id="@+id/navigationEmergency"
+        android:icon="@drawable/emrgancyicon"
+        android:title="Emergency" />
+
+    <item
+        android:id="@+id/navigationNearby"
+        android:icon="@drawable/nearbyicon"
+        android:title="Nearby" />
+
+</menu>

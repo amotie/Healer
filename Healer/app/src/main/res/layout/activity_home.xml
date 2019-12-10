@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+   >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar2"
+        android:background="@drawable/primarycolorborder"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#ffff"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello Ali Motie"
+                android:textColor="#000000"
+                android:textSize="30sp"
+
+                android:layout_marginTop="40dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOW CAN WE TAKE"
+
+                android:textSize="23sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARE OF YOU?!"
+                android:textSize="23sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Doctor"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="50dp"
+
+                    android:background="@drawable/grayborder"
+                    android:layout_margin="5dp"
+                    android:drawableTop="@drawable/finddoctor"
+                    android:onClick="findDoctor"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Hospital"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="50dp"
+                    android:textSize="13sp"
+                    android:onClick="findHospital"
+                    android:drawableTop="@drawable/hospital"
+                    android:background="@drawable/grayborder"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency"
+                    android:padding="50dp"
+                    android:drawableTop="@drawable/emargancy"
+                    android:background="@drawable/grayborder"
+                    android:layout_margin="5dp"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:onClick="emergency"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="appointment"
+                    android:drawableTop="@drawable/appointment"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:padding="50dp"
+                    android:textSize="13sp"
+                    android:onClick="appointment"
+                    android:background="@drawable/grayborder"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="50dp"
+
+                    android:background="@drawable/grayborder"
+                    android:layout_margin="5dp"
+                    android:drawableTop="@drawable/finddoctor"
+                    android:onClick="findDoctor"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nearby"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="50dp"
+                    android:textSize="13sp"
+                    android:onClick="findHospital"
+                    android:drawableTop="@drawable/hospital"
+                    android:background="@drawable/grayborder"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Doctor"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="50dp"
+
+                    android:background="@drawable/grayborder"
+                    android:layout_margin="5dp"
+                    android:drawableTop="@drawable/finddoctor"
+                    android:onClick="findDoctor"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Hospital"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="50dp"
+                    android:textSize="13sp"
+                    android:onClick="findHospital"
+                    android:drawableTop="@drawable/hospital"
+                    android:background="@drawable/grayborder"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Doctor"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="50dp"
+
+                    android:background="@drawable/grayborder"
+                    android:layout_margin="5dp"
+                    android:drawableTop="@drawable/finddoctor"
+                    android:onClick="findDoctor"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Hospital"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="50dp"
+                    android:textSize="13sp"
+                    android:onClick="findHospital"
+                    android:drawableTop="@drawable/hospital"
+                    android:background="@drawable/grayborder"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

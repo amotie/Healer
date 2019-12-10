@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Appointments"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar2"
+        android:background="@drawable/primarycolorborder"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointments"
+                android:textColor="#ffff"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       android:theme="@style/Widget.CalendarView.Custom"
+        android:layout_margin="25dp"
+        android:layout_weight="4"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/primarycolorlayout"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 May 2017"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:00 PM"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/TimeList"
+        android:background="#ffff"
+      android:layout_weight="4"
+        android:numColumns="2"/>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonlogin"
+        android:onClick="BookNow"
+        android:text="Book Now"
+        android:textColor="#ffff"
+        android:textSize="20sp" />
+</LinearLayout>

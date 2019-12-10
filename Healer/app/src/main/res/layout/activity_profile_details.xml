@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileDetails"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight(Kg)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+
+            android:layout_gravity="center_horizontal"/>
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:id="@+id/WeightPicker"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height(cm)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"/>
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/HeightPicker"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"/>
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/GenderPicker"
+
+
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+<Button
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:text="Next"
+    android:background="@drawable/buttonlogin"
+    android:textSize="25sp"
+    android:textColor="#ffff"
+    android:layout_gravity="center"
+    android:layout_marginBottom="25dp"
+    android:onClick="Next"
+   />
+</LinearLayout>

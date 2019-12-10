@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amotie.healer"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Healer"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.amotie.healer.History" />
+        <activity android:name="com.amotie.healer.Appointments" />
+        <activity android:name="com.amotie.healer.Profile" />
+        <activity android:name="com.amotie.healer.Doctor" />
+        <activity android:name="com.amotie.healer.ProfileDetails" />
+        <activity
+            android:name="com.amotie.healer.SignUp"
+            android:noHistory="true" />
+        <activity
+            android:name="com.amotie.healer.Home"
+            android:label="@string/title_activity_home" />
+        <activity android:name="com.amotie.healer.introManger" />
+        <activity
+            android:name="com.amotie.healer.SplashScreen"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amotie.healer.MainActivity"
+            android:noHistory="true" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.amotie.healer.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
