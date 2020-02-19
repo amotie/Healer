@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Healar</string>
+    <string name="felter">ali</string>
+
+    <!--        <string-array name="planets_array">-->
+    <!--            <item>Mercury</item>-->
+    <!--            <item>Venus</item>-->
+    <!--            <item>Earth</item>-->
+    <!--            <item>Mars</item>-->
+    <!--            <item>Jupiter</item>-->
+    <!--            <item>Saturn</item>-->
+    <!--            <item>Uranus</item>-->
+    <!--            <item>Neptune</item>-->
+    <!--        </string-array>-->
+    <string-array name="DoctorSpecialities">
+        <item>Dermatology(Skin)</item>
+        <item>Dentistry(Teeth)</item>
+        <item>Psychiatry</item>
+        <item>Pediatrics and New born</item>
+        <item>neurology</item>
+        <item>Orthopedics</item>
+        <item>Gynaecology and Infertility</item>
+        <item>Ear,Nose and Throat</item>
+        <item>Cardiology and Vascular Disease</item>
+        <item>Allergy and immunology</item>
+        <item>Andrology and Male Infertility</item>
+        <item>Audiology</item>
+        <item>Cardiology and Thoracic Surgery (Heart &amp; Chest)</item>
+        <item>Chest and Respiratory</item>
+        <item>Diabetes and Endocrinology</item>
+        <item>Diagnostic Radiology (Scan Centers)</item>
+        <item>Dietitian and Nutrition</item>
+        <item>Family Medicine</item>
+        <item>Gastroenterology and Endoscopy</item>
+        <item>General Practice</item>
+        <item>General Surgery</item>
+        <item>Geriatrics (Old People Health)</item>
+        <item>Hematology</item>
+        <item>Hepatology (Liver Doctor)</item>
+        <item>Internal Medicine</item>
+        <item>IVF and Infertility</item>
+        <item>Laboratories</item>
+        <item>Nephrology</item>
+        <item>Neurosurgery (Brain &amp; Nerves Surgery)</item>
+        <item>Obesity and Laparoscopic Surgery</item>
+        <item>Oncology (Tumor)</item>
+        <item>Oncology Surgery (Tumor Surgery)</item>
+        <item>Ophthalmology (Eyes)</item>
+        <item>Osteopathy (Osteopathic Medicine)</item>
+        <item>Pain Management</item>
+        <item>Pediatric Surgery</item>
+        <item>Phoniatrics (Speech)</item>
+        <item>Physiotherapy and Sport Injuries</item>
+        <item>Plastic Surgery</item>
+        <item>Rheumatology</item>
+        <item>Spinal Surgery</item>
+        <item>Urology (Urinary System)</item>
+        <item>Vascular Surgery (Arteries and Vein Surgery)</item>
+    </string-array>
+</resources>

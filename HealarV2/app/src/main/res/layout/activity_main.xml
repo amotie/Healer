@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:src="@drawable/esraa"
+    android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="25dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:background="@drawable/cerclreborder"
+            android:layout_marginBottom="25dp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@drawable/cerclreborder"
+            android:shadowColor="@color/colorAccent"
+            android:layout_marginBottom="25dp"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/colorPrimary"
+            android:onClick="ForgetPassword"
+            android:clickable="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:background="@drawable/buttonlogin"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:onClick="Login"
+        android:id="@+id/Login"
+        android:layout_marginBottom="15dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't Have account?"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Sign Up"
+        android:textColor="@color/colorPrimary"
+        android:onClick="SignUp"
+        android:clickable="true"/>
+</LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

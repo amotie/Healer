@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+
+   >
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/CategoriesFilter"
+        >
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+        android:buttonTint="@color/colorPrimary"
+        android:id="@+id/DoctorFilter"
+        android:textSize="20sp"
+
+        android:layout_weight="1"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pharmacy"
+        android:textSize="20sp"
+        android:buttonTint="@color/colorPrimary"
+        android:id="@+id/PharmacyFilter"
+
+        android:layout_weight="1"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laps"
+        android:textSize="20sp"
+        android:buttonTint="@color/colorPrimary"
+        android:id="@+id/LapsFilter"
+
+        android:layout_weight="1"/>
+</RadioGroup>
+
+
+</LinearLayout>

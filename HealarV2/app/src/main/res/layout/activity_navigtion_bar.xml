@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigtionBar"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/top_navigation_constraint"
+        android:id="@+id/fragmetControl"/>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/top_navigation_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#ffffff"
+        android:elevation="4dp"
+        android:padding="4dp"
+        app:bnc_mode="spread"
+        android:layout_alignParentBottom="true">
+
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/l_item_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_colorActive="#005A6E"
+
+        app:bt_icon="@drawable/ic_home_black_24dp"
+        app:bt_title="home"
+            app:bnc_mode="spread"
+            app:bt_colorInactive="#005A6E"
+        />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorInactive="#005A6E"
+            app:bt_colorActive="#005A6E"
+
+            app:bt_icon="@drawable/ic_search_black_24dp"
+            app:bt_title="Search"
+            />
+             />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorInactive="#005A6E"
+            app:bt_colorActive="#005A6E"
+
+            app:bt_icon="@drawable/ic_person_black_24dp"
+            app:bt_title="Profile"
+            />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorInactive="#005A6E"
+            app:bt_colorActive="#005A6E"
+
+            app:bt_icon="@drawable/ic_settings_black_24dp"
+            app:bt_title="Settings"
+            />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+</RelativeLayout>
