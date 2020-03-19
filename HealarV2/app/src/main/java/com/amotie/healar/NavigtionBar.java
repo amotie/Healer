@@ -2,6 +2,8 @@ package com.amotie.healar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -24,8 +26,12 @@ public class NavigtionBar extends AppCompatActivity {
 
 
         if (selectedFragment==null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmetControl,new Home_Fragment()).commit();
 
+            FragmentManager manager=getSupportFragmentManager();
+            FragmentTransaction transaction=manager.beginTransaction();
+            transaction.replace(R.id.fragmetControl,new Home_Fragment()).commit();
+
+            manager.popBackStack();
            System.out.println("SADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
         }
 
@@ -37,6 +43,7 @@ public class NavigtionBar extends AppCompatActivity {
                     case R.id.l_item_home:
 
                     selectedFragment=new Home_Fragment();
+
                         break;
                     case R.id.l_item_Search:
                         selectedFragment=new Search_Fragment();
@@ -50,9 +57,16 @@ public class NavigtionBar extends AppCompatActivity {
 
 
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmetControl,selectedFragment).addToBackStack(null).commit();
-                System.out.println("55555555555555555555555555555555555555555");
+                FragmentManager manager=getSupportFragmentManager();
+                FragmentTransaction transaction=manager.beginTransaction();
+                transaction.replace(R.id.fragmetControl,selectedFragment).commit();
+
+                manager.popBackStack();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmetControl,selectedFragment).addToBackStack(null).commit();
+//                System.out.println("55555555555555555555555555555555555555555");
             }
         });
     }
+
+
 }

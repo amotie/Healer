@@ -39,7 +39,7 @@ public class Home_Fragment extends Fragment {
 
         for (int i=0;i<=100;i++){
 
-            ForYouListItem doctorListItem=new ForYouListItem(foryouImage,"ALi Motie","SDasdasdasdasdasddddddddd");
+            ForYouListItem doctorListItem=new ForYouListItem(foryouImage,"Nadia Mohamed","SDasdasdasdasdasddddddddd");
 
             forYouListItems.add(doctorListItem);
         }
@@ -56,7 +56,7 @@ public class Home_Fragment extends Fragment {
 
         for (int i=0;i<=100;i++){
 
-            DoctorHomeListItem doctorListItem=new DoctorHomeListItem(doctorImage,"ALi Motie","SDasdasdasdasdasddddddddd");
+            DoctorHomeListItem doctorListItem=new DoctorHomeListItem(doctorImage,"Nadia mohamed","SDasdasdasdasdasddddddddd");
 
             doctorHomeListItemList.add(doctorListItem);
         }
@@ -74,7 +74,7 @@ public class Home_Fragment extends Fragment {
 
         for (int i=0;i<=100;i++){
 
-            MedicineHomeListItem medicineHomeListItem=new MedicineHomeListItem(medicineImage,"ALi Motie","SDasdasdasdasdasddddddddd");
+            MedicineHomeListItem medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Cataflam","SDasdasdasdasdasddddddddd");
 
             medicineHomeListItems.add(medicineHomeListItem);
         }
@@ -82,4 +82,5 @@ public class Home_Fragment extends Fragment {
         medicine.setAdapter(adaptermedicine);
         return view;
     }
+
 }

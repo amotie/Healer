@@ -61,18 +61,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gender?"
-                android:layout_margin="10dp"
-                android:textSize="15sp"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender?"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Select Gender"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/error"
+                    android:id="@+id/SelectGenderError"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
       <RadioGroup
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
           android:layout_marginBottom="20dp"
-
+          android:id="@+id/Gender"
 
           >
 
@@ -94,7 +111,18 @@
               android:layout_weight="1"/>
       </RadioGroup>
         </LinearLayout>
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:background="@drawable/cerclreborder"
+            android:shadowColor="@color/colorAccent"
+            android:layout_marginBottom="25dp"
+            android:hint="Birth date"
+            android:id="@+id/berthDate"
+            android:textColor="@color/colorPrimary"
+/>
+        <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone"
@@ -116,6 +144,14 @@
         android:id="@+id/password"
         android:textColor="@color/colorPrimary"
         />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password Does't Match"
+            android:textColor="@color/error"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:id="@+id/passowrdNotMatch"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

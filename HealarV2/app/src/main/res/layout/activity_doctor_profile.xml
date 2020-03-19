@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ALi Motie"
+                android:text="Nadia Mohamed"
                 android:textColor="#000000"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
@@ -78,6 +78,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
+                android:onClick="DoctorProfileLocation"
                 >
             <ImageView
                 android:layout_width="33.02dp"
@@ -88,7 +89,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.7KM"
+                    android:text="Location"
+                    android:id="@+id/LocationDestance"
                     android:layout_gravity="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"/>
@@ -101,7 +103,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginStart="10dp">
+                    android:layout_marginStart="10dp"
+                    android:onClick="DoctorProfileCall">
                     <ImageView
                         android:layout_width="33.02dp"
                         android:layout_height="31.43dp"
@@ -171,11 +174,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
+
                 android:orientation="vertical">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -184,49 +185,15 @@
                     android:textSize="25sp"
 
                     />
-                <RatingBar
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:numStars="5"
-                    android:rating="4"
-                    android:isIndicator="true"
-                    android:progressTint="@color/colorPrimary"
-                    android:layout_alignParentEnd="true"
-                    style="@android:style/Widget.Material.RatingBar.Small"/>
-                </RelativeLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/doctor"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Samia Gamal"
-                        android:textColor="#000000"
-                      />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="25-11-2018"/>
-                    </LinearLayout>
-                   </LinearLayout>
-                <TextView
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="The Good Doctor would really like to make you feel good.
-And that's not always a good thing. ABC's new medical drama"
-                    android:maxLines="3"
+                    android:layout_height="200dp"
+                    android:id="@+id/ReviewRecicleView"
+
+
                     />
             </LinearLayout>
 
@@ -240,6 +207,7 @@ And that's not always a good thing. ABC's new medical drama"
             android:background="@drawable/buttonlogin"
             android:textColor="#ffff"
             android:layout_marginBottom="60dp"
+            android:onClick="BookAppointment"
             />
     </androidx.cardview.widget.CardView>
     </FrameLayout>

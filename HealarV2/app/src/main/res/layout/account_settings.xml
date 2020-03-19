@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+   >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:src="@drawable/doctor"
+
+        android:layout_marginTop="30dp"
+        android:id="@+id/profilePicture"
+        />
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="50dp"
+
+            android:layout_alignEnd="@id/profilePicture"
+            android:layout_alignBottom="@id/profilePicture"
+            android:id="@+id/changeProfilePicture"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image_black_24dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:background="@drawable/cerclreborder"
+        android:shadowColor="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:inputType="text"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Username"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="amotie@outlook.com"
+        android:background="@drawable/cerclreborder"
+        android:shadowColor="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/email"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01001289970"
+        android:background="@drawable/cerclreborder"
+        android:shadowColor="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:inputType="phone"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/phone"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:background="@drawable/cerclreborder"
+        android:shadowColor="@color/colorAccent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:text="28/02/1998"
+        android:id="@+id/berthDate"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender?"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Select Gender"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/error"
+                android:id="@+id/SelectGenderError"
+                android:textSize="15sp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/Gender"
+
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:buttonTint="@color/colorPrimary"
+                android:id="@+id/MaleRadioButton"
+
+                android:layout_weight="1"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:buttonTint="@color/colorPrimary"
+                android:id="@+id/FemaleRadioButton"
+
+                android:layout_weight="1"/>
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/buttonlogin"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+
+        android:layout_gravity="center"
+        android:id="@+id/accountSave"
+        android:layout_marginBottom="15dp"/>
+</LinearLayout>

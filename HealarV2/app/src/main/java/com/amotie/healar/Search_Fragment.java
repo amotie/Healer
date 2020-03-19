@@ -4,52 +4,97 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Search_Fragment extends Fragment {
-    Spinner spinner;
-    Button catigoresBtn,rateBtn;
+
     RecyclerView result;
     RecyclerView.Adapter adapter;
     private List<SearchListitem> searchListitems;
     Bitmap doctorImage;
+    MaterialSearchView searchView;
+    CardView searchCard;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.search_fragment,container,false);
-        catigoresBtn=(Button)view.findViewById(R.id.CategoriesBtn);
-        rateBtn=(Button)view.findViewById(R.id.RateBtn);
-        catigoresBtn.setOnClickListener(new View.OnClickListener() {
+        searchCard=(CardView)view.findViewById(R.id.SearchCardView);
+        searchCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SearchBottomSheeetCatigores searchBottomSheeetCatigores=new SearchBottomSheeetCatigores();
-
-                searchBottomSheeetCatigores.show(getFragmentManager(),"catigores");
-
+                searchView.performClick();
+              searchView.showSearch(true);
             }
         });
-        rateBtn.setOnClickListener(new View.OnClickListener() {
+        searchView =(MaterialSearchView)view.findViewById(R.id.SearchView);
+
+
+
+        searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onQueryTextSubmit(String query) {
+                //Do some magic
 
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                //Do some magic
+                return false;
             }
         });
+
+        searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+            @Override
+            public void onSearchViewShown() {
+
+                //Do some magic
+            }
+
+            @Override
+            public void onSearchViewClosed() {
+
+                //Do some magic
+            }
+        });
+//        catigoresBtn=(Button)view.findViewById(R.id.CategoriesBtn);
+//        rateBtn=(Button)view.findViewById(R.id.RateBtn);
+//        catigoresBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                SearchBottomSheeetCatigores searchBottomSheeetCatigores=new SearchBottomSheeetCatigores();
+//
+//                searchBottomSheeetCatigores.show(getFragmentManager(),"catigores");
+//
+//            }
+//        });
+//        rateBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
         result = (RecyclerView)view.findViewById(R.id.SearchResult);
         LinearLayoutManager layoutManager = new  LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         result.setHasFixedSize(true);
@@ -69,5 +114,6 @@ public class Search_Fragment extends Fragment {
 
         return view;
     }
+
 
 }

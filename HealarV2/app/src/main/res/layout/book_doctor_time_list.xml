@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="179.01dp"
+        android:layout_height="58.46dp"
+        android:layout_margin="15dp"
+        android:id="@+id/timeButton"
+        app:cardCornerRadius="8dp"
+        android:clickable="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appt Time"
+            android:textSize="16sp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:00 Pm"
+            android:textSize="16sp"
+            android:id="@+id/timeintimeBtn"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="end|center"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

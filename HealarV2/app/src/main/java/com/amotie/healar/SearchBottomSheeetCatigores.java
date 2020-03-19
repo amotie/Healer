@@ -28,12 +28,15 @@ public class SearchBottomSheeetCatigores extends BottomSheetDialogFragment {
                switch(checkedId) {
                    case R.id.DoctorFilter:
                        // switch to fragment 1
+                       dismiss();
                        break;
                    case R.id.PharmacyFilter:
                        // Fragment 2
+                       dismiss();
                        break;
                    case R.id.LapsFilter:
                        // Fragment 2
+                       dismiss();
                        break;
                }
            }

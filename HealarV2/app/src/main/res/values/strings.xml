@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Healar</string>
     <string name="felter">ali</string>
+    <string name="userNameError">Enter Valed Name</string>
+    <string name="EmailError">Enter Valid Email</string>
+    <string name="passworderror">Enter Valid Password</string>
+    <string name="berthdateError">Enter Valid BirthDate</string>
+    <string name="phoneError">Enter Valid phone Number</string>
+    <string name="passwordConfermError">Password Does not match</string>
 
     <!--        <string-array name="planets_array">-->
     <!--            <item>Mercury</item>-->
@@ -57,4 +63,8 @@
         <item>Urology (Urinary System)</item>
         <item>Vascular Surgery (Arteries and Vein Surgery)</item>
     </string-array>
+
+    <string name="title_activity_splach__screen">Splach_Screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
