@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Healer</string>
+    <string name="email">Email</string>
+
+    <string name="password">Password</string>
+    <string name="signin">Signin</string>
+    <string name="login">Login</string>
+    <string name="forgetpassowrd">Forget Password?</string>
+    <string name="create_acount">Create Account</string>
+    <string name="don_t_have_account">Don\'t Have account?</string>
+    <string name="EmailisNotValid">Email is Not Valid</string>
+    <string name="PasswordisNotValid">Password is Not Valid</string>
+    <string name="reset_password">Reset password</string>
+    <string name="todo">TODO</string>
+    <string name="Signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="birth_day">Birth Day</string>
+    <string name="phone">Phone</string>
+    <string name="conferm_password">Confirm Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender?</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="select_your_gender">Select Your Gender</string>
+    <string name="usernameNotValide">Username not Valid</string>
+    <string name="emailNotValide">email not Valid</string>
+    <string name="dayNotValide">day not Valid</string>
+    <string name="monthNotValide">Month not Valid</string>
+    <string name="yearNotValide">year not Valid</string>
+    <string name="phoneNotValide">phone not Valid</string>
+    <string name="passwordNotValide">password not Valid</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+    <string name="heal">Heal</string>
+    <string name="deals">Deals</string>
+    <string name="for_you">For You</string>
+    <string name="name">Name</string>
+
+    <string name="description">Description</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="settings">Settings</string>
+    <string name="doctors">Doctors</string>
+    <string name="medicines">Medicines</string>
+    <string name="doctor_specialist">Doctor Specialist</string>
+    <string name="categories">Categories</string>
+    <string name="labs">Labs</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="history">History</string>
+    <string name="dr">DR.</string>
+    <string name="sepc">Sepc.</string>
+    <string name="time_date">Time/Date</string>
+    <string name="location">Location</string>
+    <string name="price">Price</string>
+    <string-array name="DoctorSpecialistArray">
+    <item>lung</item>
+    <item>neurology</item>
+    <item>nose</item>
+    <item>ophthalmology</item>
+    <item>psychiatry</item>
+    <item>testing glasses</item>
+    <item>tooth</item>
+    <item>urology</item>
+    <item>bone</item>
+    <item>dermatology</item>
+    <item>Family medicine</item>
+    <item>heartbeat</item>
+</string-array>
+
+
+</resources>
