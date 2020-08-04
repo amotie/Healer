@@ -1,14 +1,15 @@
 package com.amotie.healer;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -34,12 +35,17 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.action_bar_menu,menu);
         MenuItem search=menu.findItem(R.id.search_Icon);
-        SearchView searchView=(SearchView)search.getActionView();
+        androidx.appcompat.widget.SearchView searchView=(androidx.appcompat.widget.SearchView) search.getActionView();
         searchView.setQueryHint("Search");
+
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                Intent intent=new Intent(getApplicationContext(),Search.class);
+                intent.putExtra("SearchValue",query);
+                startActivity(intent);
                 return false;
             }
 
@@ -49,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener=new BottomNavigationView.OnNavigationItemSelectedListener() {

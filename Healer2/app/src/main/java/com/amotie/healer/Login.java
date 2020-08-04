@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity  implements TextView.OnEditorAction
         }
         return false;
     }
-    @SuppressLint("ResourceType")
+
     public void Signin(View view){
         Log.i("SignIn","SignIn");
         if(loginViewModel.ValidateEmail(email.getEditText().getText().toString())){
@@ -85,6 +85,10 @@ public class Login extends AppCompatActivity  implements TextView.OnEditorAction
                 password.setErrorEnabled(false);
                 signIn.setText("");
                 looding.setVisibility(View.VISIBLE);
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+//                LoginConnection loginConnection=new LoginConnection(Login.this);
+//                loginConnection.execute(emailEditText.getText().toString(),passwordEditText.getText().toString());
             }
             else{
                 //Email Is Right But Password Is Wrong

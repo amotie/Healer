@@ -48,17 +48,24 @@ public class Home extends Fragment {
         foryou.setHasFixedSize(true);
         foryou.setLayoutManager(layoutManager);
         forYouListItems=new ArrayList<>();
-        foryouImage= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        foryouImage= BitmapFactory.decodeResource(getResources(),R.drawable.nabilaelkhalfawy);
 
 //        if (foryouImage == null){
 //            Log.i("Image","Before");
 //        }
-        for (int i=0;i<=100;i++){
 
-            ForYouListItem doctorListItem=new ForYouListItem(foryouImage,"Nadia Mohamed","SDasdasdasdasdasddddddddd");
-
+            ForYouListItem doctorListItem=new ForYouListItem(foryouImage,"Nadia Mohamed","dermatology");
             forYouListItems.add(doctorListItem);
-        }
+            foryouImage=BitmapFactory.decodeResource(getResources(),R.drawable.salmafrag);
+         doctorListItem=new ForYouListItem(foryouImage,"Salma frag","Dentistry");
+        forYouListItems.add(doctorListItem);
+        foryouImage=BitmapFactory.decodeResource(getResources(),R.drawable.salymohmad);
+         doctorListItem=new ForYouListItem(foryouImage,"saly mohmed","cardiology");
+        forYouListItems.add(doctorListItem);
+        foryouImage=BitmapFactory.decodeResource(getResources(),R.drawable.noraelmahdy);
+         doctorListItem=new ForYouListItem(foryouImage,"nora elmahdy","bone");
+        forYouListItems.add(doctorListItem);
+
         adapter=new ForYouAdaptor(forYouListItems,getContext());
         foryou.setAdapter(adapter);
 //        -------------------------------------FORYOU----------------------------------------------------------------
@@ -68,14 +75,25 @@ public class Home extends Fragment {
 
         doctors.setLayoutManager(layoutManager1);
         doctorHomeListItemList=new ArrayList<>();
-        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.nabilaelkhalfawy);
 
-        for (int i=0;i<=100;i++){
 
-            DoctorHomeListItem doctorListItem=new DoctorHomeListItem(doctorImage,"Nadia mohamed","SDasdasdasdasdasddddddddd");
 
-            doctorHomeListItemList.add(doctorListItem);
-        }
+            DoctorHomeListItem doctorHomeListItem=new DoctorHomeListItem(doctorImage,"Nadia mohamed","dermatology");
+
+            doctorHomeListItemList.add(doctorHomeListItem);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.gourgemelad);
+         doctorHomeListItem=new DoctorHomeListItem(doctorImage,"Gourge Melad","dermatology");
+
+        doctorHomeListItemList.add(doctorHomeListItem);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.noraelmahdy);
+         doctorHomeListItem=new DoctorHomeListItem(doctorImage,"nora ahmed","dermatology");
+
+        doctorHomeListItemList.add(doctorHomeListItem);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.salymohmad);
+         doctorHomeListItem=new DoctorHomeListItem(doctorImage,"Saly mohmed","dermatology");
+
+        doctorHomeListItemList.add(doctorHomeListItem);
         adapterdoctor=new DoctorHomeAdaptor(doctorHomeListItemList,getContext());
         doctors.setAdapter(adapterdoctor);
 
@@ -86,14 +104,19 @@ public class Home extends Fragment {
 
         medicine.setLayoutManager(layoutManager2);
         medicineHomeListItems=new ArrayList<>();
-        medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.catflam);
 
-        for (int i=0;i<=100;i++){
 
-            MedicineHomeListItem medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Cataflam","SDasdasdasdasdasddddddddd");
 
+            MedicineHomeListItem medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Cataflam","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
             medicineHomeListItems.add(medicineHomeListItem);
-        }
+        medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.panadol);
+         medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Panadol","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
+        medicineHomeListItems.add(medicineHomeListItem);
+        medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.augmantien);
+         medicineHomeListItem=new MedicineHomeListItem(medicineImage,"augmantien","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
+        medicineHomeListItems.add(medicineHomeListItem);
+
         adaptermedicine=new MedicineHomeAdaptor(medicineHomeListItems,getContext());
         medicine.setAdapter(adaptermedicine);
         return view;

@@ -55,20 +55,28 @@
     <string name="time_date">Time/Date</string>
     <string name="location">Location</string>
     <string name="price">Price</string>
+    <string name="textview">TextView</string>
+    <string name="sadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffadsdsadas">sadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffadsdsadas</string>
+    <string name="available_dates">Available Dates</string>
+    <string name="available_times">Available Times</string>
+    <string name="review">Review</string>
+    <string name="textvidasssssssssssssssssssssssssssssssssssssssssssssssssssdasssssssssew">TextVidasssssssssssssssssssssssssssssssssssssssssssssssssssdasssssssssew</string>
+    <string name="book_appointment">Book Appointment</string>
+
     <string-array name="DoctorSpecialistArray">
-    <item>lung</item>
-    <item>neurology</item>
-    <item>nose</item>
-    <item>ophthalmology</item>
-    <item>psychiatry</item>
-    <item>testing glasses</item>
-    <item>tooth</item>
-    <item>urology</item>
-    <item>bone</item>
-    <item>dermatology</item>
-    <item>Family medicine</item>
-    <item>heartbeat</item>
-</string-array>
+        <item>lung</item>
+        <item>neurology</item>
+        <item>nose</item>
+        <item>ophthalmology</item>
+        <item>psychiatry</item>
+        <item>testing glasses</item>
+        <item>tooth</item>
+        <item>urology</item>
+        <item>bone</item>
+        <item>dermatology</item>
+        <item>Family medicine</item>
+        <item>heartbeat</item>
+    </string-array>
 
 
 </resources>

@@ -16,6 +16,9 @@ import android.widget.TextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class SignUp extends AppCompatActivity implements TextView.OnEditorActionListener{
     TextInputLayout usernameLayout,
             emailLayout,
@@ -79,12 +82,13 @@ public class SignUp extends AppCompatActivity implements TextView.OnEditorAction
                 }
             }
         });
+
         signup=(Button)findViewById(R.id.SignUp);
         looding=(ProgressBar)findViewById(R.id.progressBar);
         signUpViewModel = ViewModelProviders.of(this).get(SignUpViewModel.class);
     }
 
-    public void SignUp(View view){
+    public void SignUp(View view) throws JSONException {
         if (signUpViewModel.Validate(usernameEdit.getText().toString(),
             emailEdit.getText().toString(),
             dayEdit.getText().toString(),
@@ -97,8 +101,11 @@ public class SignUp extends AppCompatActivity implements TextView.OnEditorAction
                 genderNotSelected.setVisibility(View.GONE);
                 signup.setText("");
                 looding.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
+                SignUpConnection signUpConnection=new SignUpConnection(this);
+
+                signUpConnection.execute(usernameEdit.getText().toString(),phoneEdit.getText().toString(),emailEdit.getText().toString()
+                    ,"true","28",passwordEdit.getText().toString());
+
             }else{
                 genderNotSelected.setVisibility(View.VISIBLE);
             }

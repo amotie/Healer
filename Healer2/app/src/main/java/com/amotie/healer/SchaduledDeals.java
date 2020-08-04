@@ -31,17 +31,25 @@ public class SchaduledDeals extends Fragment {
         doctor.setHasFixedSize(true);
         doctor.setLayoutManager(layoutManager);
         doctorSchaduledDealsLists=new ArrayList<>();
-        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.noraelmahdy);
 
 //        if (foryouImage == null){
 //            Log.i("Image","Before");
 //        }
-        for (int i=0;i<=100;i++){
 
-            DoctorSchaduledDealsList doctorListItem=new DoctorSchaduledDealsList(doctorImage,"Nadia Mohamed","SDasdasdasdasdasddddddddd","10:00 AM","Nasr City","250 LE");
+
+            DoctorSchaduledDealsList doctorListItem=new DoctorSchaduledDealsList(doctorImage,"Nadia Mohamed","Dentest","10:00 AM","Nasr City","250 LE");
 
             doctorSchaduledDealsLists.add(doctorListItem);
-        }
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.salymohmad);
+         doctorListItem=new DoctorSchaduledDealsList(doctorImage,"Salma mohmed","Bone","11:00 AM","Nasr City","200 LE");
+
+        doctorSchaduledDealsLists.add(doctorListItem);
+        doctorImage= BitmapFactory.decodeResource(getResources(),R.drawable.salmafrag);
+         doctorListItem=new DoctorSchaduledDealsList(doctorImage,"Saly frag","heart","8:00 AM","Nasr City","150 LE");
+
+        doctorSchaduledDealsLists.add(doctorListItem);
+
         adapter=new DoctorSchaduledDealsAdaptor(doctorSchaduledDealsLists,getContext());
         doctor.setAdapter(adapter);
 //        ----------------------------------------DoctorDeals------------------------------------
@@ -50,17 +58,25 @@ public class SchaduledDeals extends Fragment {
         medicicene.setHasFixedSize(true);
         medicicene.setLayoutManager(layoutManager1);
         medicineSchauledDealLists=new ArrayList<>();
-        mediceneImage= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        mediceneImage= BitmapFactory.decodeResource(getResources(),R.drawable.panadol);
 
 //        if (foryouImage == null){
 //            Log.i("Image","Before");
 //        }
-        for (int i=0;i<=100;i++){
 
-            MedicineSchauledDealList medicineSchauledDealList=new MedicineSchauledDealList(doctorImage,"Nadia Mohamed","SDasdasdasdasdasddddddddd","15/10/2020");
+
+            MedicineSchauledDealList medicineSchauledDealList=new MedicineSchauledDealList(mediceneImage,"panadol","elazaby","15/10/2020");
 
             medicineSchauledDealLists.add(medicineSchauledDealList);
-        }
+        mediceneImage= BitmapFactory.decodeResource(getResources(),R.drawable.catflam);
+         medicineSchauledDealList=new MedicineSchauledDealList(mediceneImage,"cataflam","elmasry","15/10/2020");
+
+        medicineSchauledDealLists.add(medicineSchauledDealList);
+        mediceneImage= BitmapFactory.decodeResource(getResources(),R.drawable.augmantien);
+         medicineSchauledDealList=new MedicineSchauledDealList(mediceneImage,"augmanten","elazaby","15/10/2020");
+
+        medicineSchauledDealLists.add(medicineSchauledDealList);
+
         adaptorMedicene=new MediceneSchaduledDealsAdaptor(medicineSchauledDealLists,getContext());
         medicicene.setAdapter(adaptorMedicene);
         return view;

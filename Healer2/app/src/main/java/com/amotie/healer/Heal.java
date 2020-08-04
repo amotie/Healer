@@ -50,10 +50,22 @@ public class Heal extends Fragment {
         if (doctor == null){
             Log.i("Image","Before");
         }
-        for (int i=0;i<100;i++){
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_urology);
             DoctorSpicialistListHeal doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"Urology");
             doctorSpicialistListHeals.add(doctorSpicialistListHeal);
-        }
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_dermatology);
+         doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"dermatology");
+        doctorSpicialistListHeals.add(doctorSpicialistListHeal);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_bone);
+         doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"bone");
+        doctorSpicialistListHeals.add(doctorSpicialistListHeal);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_heartbeat);
+         doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"heart");
+        doctorSpicialistListHeals.add(doctorSpicialistListHeal);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_nose);
+         doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"nose");
+        doctorSpicialistListHeals.add(doctorSpicialistListHeal);
+
         doctorSpicalistAdabtor=new DoctorSpicalistAdabtor(getContext(),doctorSpicialistListHeals);
         doctorSpicialest.setAdapter(doctorSpicalistAdabtor);
 //        --------------------------------------DoctorSpicialistList--------------------------------------------------

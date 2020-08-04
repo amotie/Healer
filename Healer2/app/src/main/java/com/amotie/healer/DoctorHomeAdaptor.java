@@ -41,8 +41,8 @@ public class DoctorHomeAdaptor extends RecyclerView.Adapter<DoctorHomeAdaptor.Vi
         holder.doctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(v.getContext(),DoctorProfile.class);
-//                v.getContext().startActivity(intent);
+                Intent intent=new Intent(v.getContext(),DoctorProfile.class);
+                v.getContext().startActivity(intent);
             }
         });
     }
