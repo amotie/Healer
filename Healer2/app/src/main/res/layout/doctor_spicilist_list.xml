@@ -6,6 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="58dp"
@@ -31,10 +34,10 @@
 
     <TextView
         android:id="@+id/DoctorSpiialsstGridView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="26dp"
 
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"

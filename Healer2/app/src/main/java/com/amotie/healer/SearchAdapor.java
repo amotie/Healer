@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -139,7 +140,8 @@ public class SearchAdapor extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
     public class MedicineViewHolder extends RecyclerView.ViewHolder{
-        CircularImageView imageView,addToCart;
+        CircularImageView imageView;
+        ImageButton addToCart;
         TextView name,provider,price;
 
         public MedicineViewHolder(@NonNull View itemView) {
@@ -148,7 +150,7 @@ public class SearchAdapor extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             name=(TextView)itemView.findViewById(R.id.MedicineNameSearchList);
             provider=(TextView)itemView.findViewById(R.id.MedicineProviderSearchList);
             price=(TextView)itemView.findViewById(R.id.MedicenePriceSearchList);
-            addToCart=(CircularImageView)itemView.findViewById(R.id.circularImageView2);
+            addToCart=(ImageButton)itemView.findViewById(R.id.circularImageView2);
         }
     }
 }

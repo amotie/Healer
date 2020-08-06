@@ -59,7 +59,7 @@ public class DoctorProfile extends AppCompatActivity {
         availableTimeDoctorprofileAdaptor=new AvailableTimeDoctorprofileAdaptor(getApplicationContext(),availavleTimesDoctorProfileList);
         availabletime.setAdapter(availableTimeDoctorprofileAdaptor);
 //---------------------------------------------------Review-----------------------------------------------------------
-        review=(RecyclerView)findViewById(R.id.ReviewReycleView);
+        review=(RecyclerView)findViewById(R.id.TypeExaminationReycleView);
         LinearLayoutManager layoutManager2 = new  LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         review.setHasFixedSize(true);
         review.setLayoutManager(layoutManager2);

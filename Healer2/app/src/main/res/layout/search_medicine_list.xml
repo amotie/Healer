@@ -65,7 +65,7 @@
                 app:layout_constraintStart_toEndOf="@+id/circularImageView"
                 app:layout_constraintTop_toBottomOf="@+id/MedicineNameSearchList" />
 
-            <com.mikhaellopez.circularimageview.CircularImageView
+            <ImageButton
 
                 android:id="@+id/circularImageView2"
                 android:layout_width="25dp"
@@ -76,8 +76,7 @@
                 android:elevation="10dp"
                 android:src="@drawable/ic_baseline_add_shopping_cart_24"
 
-                app:civ_border="false"
-                app:civ_shadow="false"
+                android:background="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

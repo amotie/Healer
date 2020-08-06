@@ -25,7 +25,7 @@ public class MedicineProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine_profile);
-//        getSupportActionBar().hide();
+        getSupportActionBar().hide();
         counter=(TextView)findViewById(R.id.CounterCart);
         plus=(ImageButton)findViewById(R.id.plusBtn);
         subtract=(ImageButton)findViewById(R.id.menusBtn);
@@ -42,15 +42,15 @@ public class MedicineProfile extends AppCompatActivity {
             }
         });
 
-        review=(RecyclerView)findViewById(R.id.ReviewReycleView);
+        review=(RecyclerView)findViewById(R.id.TypeExaminationReycleView);
         LinearLayoutManager layoutManager2 = new  LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         review.setHasFixedSize(true);
         review.setLayoutManager(layoutManager2);
         reviewDoctorProfileLists=new ArrayList<>();
 
-        ReviewDoctorProfileList reviewDoctorProfileList=new ReviewDoctorProfileList("Ali","15-10-2020",5f,"Good Doctor");
+        ReviewDoctorProfileList reviewDoctorProfileList=new ReviewDoctorProfileList("Ali","15-10-2020",5f,"Exultant");
         reviewDoctorProfileLists.add(reviewDoctorProfileList);
-        reviewDoctorProfileList=new ReviewDoctorProfileList("Nader","30-10-2020",2.5f,"the worst Doctor Ever");
+        reviewDoctorProfileList=new ReviewDoctorProfileList("Said","30-10-2020",2.5f,"has bad Side effects");
         reviewDoctorProfileLists.add(reviewDoctorProfileList);
         reviewDoctorProfileList=new ReviewDoctorProfileList("salma","20-6-2020",3.5f,"Nice");
         reviewDoctorProfileLists.add(reviewDoctorProfileList);

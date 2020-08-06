@@ -36,12 +36,12 @@ public class Heal extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.heal,container,false);
-        dialog=new ProgressDialog(getContext());
-        dialog.show();
-        dialog.setContentView(R.layout.lodding);
-        Window window=dialog.getWindow();
-        window.setBackgroundDrawableResource(R.color.colorBackground);
-        window.setLayout(250, 250);
+//        dialog=new ProgressDialog(getContext());
+//        dialog.show();
+//        dialog.setContentView(R.layout.lodding);
+//        Window window=dialog.getWindow();
+//        window.setBackgroundDrawableResource(R.color.colorBackground);
+//        window.setLayout(250, 250);
 //        dialog.setCancelable(false);
 //        -------------------------------------------ProgressBar-----------------------------------------------------
         doctorSpicialest=(GridView)view.findViewById(R.id.DoctorGridView);
@@ -50,19 +50,19 @@ public class Heal extends Fragment {
         if (doctor == null){
             Log.i("Image","Before");
         }
-        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_urology);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.urgology);
             DoctorSpicialistListHeal doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"Urology");
             doctorSpicialistListHeals.add(doctorSpicialistListHeal);
-        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_dermatology);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.dermatology);
          doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"dermatology");
         doctorSpicialistListHeals.add(doctorSpicialistListHeal);
-        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_bone);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.bone);
          doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"bone");
         doctorSpicialistListHeals.add(doctorSpicialistListHeal);
-        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_heartbeat);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.heart);
          doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"heart");
         doctorSpicialistListHeals.add(doctorSpicialistListHeal);
-        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.ic_nose);
+        doctor=BitmapFactory.decodeResource(getResources(),R.drawable.nose);
          doctorSpicialistListHeal=new DoctorSpicialistListHeal(doctor,"nose");
         doctorSpicialistListHeals.add(doctorSpicialistListHeal);
 
@@ -71,11 +71,30 @@ public class Heal extends Fragment {
 //        --------------------------------------DoctorSpicialistList--------------------------------------------------
         catigoresMedicene=(GridView)view.findViewById(R.id.CategoriesGridView);
         catigoresMediceneListHeals=new ArrayList<>();
-        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
-        for (int i=0;i<100;i++){
-            CatigoresMediceneListHeal catigoresMediceneListHeal=new CatigoresMediceneListHeal(doctor,"Urology");
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.medicinecatigory);
+
+            CatigoresMediceneListHeal catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Medicines");
             catigoresMediceneListHeals.add(catigoresMediceneListHeal);
-        }
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.bodycare);
+
+         catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Body Care");
+        catigoresMediceneListHeals.add(catigoresMediceneListHeal);
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.haircare);
+
+        catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Hair Care");
+        catigoresMediceneListHeals.add(catigoresMediceneListHeal);
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.makeup);
+
+        catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Makeup");
+        catigoresMediceneListHeals.add(catigoresMediceneListHeal);
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.dudrant);
+
+        catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Deodorant");
+        catigoresMediceneListHeals.add(catigoresMediceneListHeal);
+        catigory=BitmapFactory.decodeResource(getResources(),R.drawable.facecare);
+
+        catigoresMediceneListHeal=new CatigoresMediceneListHeal(catigory,"Face Care");
+        catigoresMediceneListHeals.add(catigoresMediceneListHeal);
         catigoresMediceneAdaptor=new CatigoresMediceneAdaptor(getContext(),catigoresMediceneListHeals);
         catigoresMedicene.setAdapter(catigoresMediceneAdaptor);
 //        ------------------------------------------CatigoresMediceneList-------------------------------------------------
@@ -84,17 +103,19 @@ public class Heal extends Fragment {
         laps.setHasFixedSize(true);
         laps.setLayoutManager(layoutManager);
         lapsHealLists=new ArrayList<>();
-        lap= BitmapFactory.decodeResource(getResources(),R.drawable.doctor);
+        lap= BitmapFactory.decodeResource(getResources(),R.drawable.elmokhtabar);
+        LapsHealList lapsHealList=new LapsHealList(lap);
 
-//        if (foryouImage == null){
-//            Log.i("Image","Before");
-//        }
-        for (int i=0;i<=100;i++){
+        lapsHealLists.add(lapsHealList);
+        lap= BitmapFactory.decodeResource(getResources(),R.drawable.cairolab);
+        lapsHealList=new LapsHealList(lap);
 
-            LapsHealList lapsHealList=new LapsHealList(lap);
+        lapsHealLists.add(lapsHealList);
+        lap= BitmapFactory.decodeResource(getResources(),R.drawable.alfa);
+        lapsHealList=new LapsHealList(lap);
 
-            lapsHealLists.add(lapsHealList);
-        }
+        lapsHealLists.add(lapsHealList);
+
         adapter=new LapsHealAdaptor(lapsHealLists,getContext());
         laps.setAdapter(adapter);
         return view;
