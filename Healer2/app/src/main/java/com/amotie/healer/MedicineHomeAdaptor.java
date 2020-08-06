@@ -1,6 +1,7 @@
 package com.amotie.healer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,13 @@ public class MedicineHomeAdaptor extends RecyclerView.Adapter<MedicineHomeAdapto
         holder.imageView.setImageBitmap(medicineHomeListItem.image);
         holder.name.setText(medicineHomeListItem.name);
         holder.description.setText(medicineHomeListItem.description);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),MedicineProfile.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
     }
 

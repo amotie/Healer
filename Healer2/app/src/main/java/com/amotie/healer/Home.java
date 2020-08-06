@@ -35,12 +35,12 @@ public class Home extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home,container,false);
-        dialog=new ProgressDialog(getContext());
-        dialog.show();
-        dialog.setContentView(R.layout.lodding);
-        Window window=dialog.getWindow();
-        window.setBackgroundDrawableResource(R.color.colorBackground);
-        window.setLayout(250, 250);
+//        dialog=new ProgressDialog(getContext());
+//        dialog.show();
+//        dialog.setContentView(R.layout.lodding);
+//        Window window=dialog.getWindow();
+//        window.setBackgroundDrawableResource(R.color.colorBackground);
+//        window.setLayout(250, 250);
 //        dialog.setCancelable(false);
 //        -------------------------------------------ProgressBar-----------------------------------------------------
         foryou = (RecyclerView)view.findViewById(R.id.ForYouList);
@@ -110,11 +110,17 @@ public class Home extends Fragment {
 
             MedicineHomeListItem medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Cataflam","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
             medicineHomeListItems.add(medicineHomeListItem);
+         medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Cataflam","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
+        medicineHomeListItems.add(medicineHomeListItem);
         medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.panadol);
          medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Panadol","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
         medicineHomeListItems.add(medicineHomeListItem);
+        medicineHomeListItem=new MedicineHomeListItem(medicineImage,"Panadol","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
+        medicineHomeListItems.add(medicineHomeListItem);
         medicineImage= BitmapFactory.decodeResource(getResources(),R.drawable.augmantien);
          medicineHomeListItem=new MedicineHomeListItem(medicineImage,"augmantien","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
+        medicineHomeListItems.add(medicineHomeListItem);
+        medicineHomeListItem=new MedicineHomeListItem(medicineImage,"augmantien","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo");
         medicineHomeListItems.add(medicineHomeListItem);
 
         adaptermedicine=new MedicineHomeAdaptor(medicineHomeListItems,getContext());

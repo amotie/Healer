@@ -35,30 +35,26 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.action_bar_menu,menu);
         MenuItem search=menu.findItem(R.id.search_Icon);
-        androidx.appcompat.widget.SearchView searchView=(androidx.appcompat.widget.SearchView) search.getActionView();
-        searchView.setQueryHint("Search");
 
-
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Intent intent=new Intent(getApplicationContext(),Search.class);
-                intent.putExtra("SearchValue",query);
-                startActivity(intent);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.search_Icon:
+                Intent intent=new Intent(getApplicationContext(),Search.class);
+                startActivity(intent);
+                break;
+            case R.id.cart_Icon:
+                Intent intent1=new Intent(getApplicationContext(),Cart.class);
+                startActivity(intent1);
+                break;
+            case R.id.setting_Icon:
+                Intent intent3=new Intent(getApplicationContext(),Settings.class);
+                startActivity(intent3);
+
+        }
         return super.onOptionsItemSelected(item);
     }
 

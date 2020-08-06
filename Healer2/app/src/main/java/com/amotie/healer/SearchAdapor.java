@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class SearchAdapor extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements Filterable {
@@ -133,8 +132,8 @@ public class SearchAdapor extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         public DoctorViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView=(CircularImageView)itemView.findViewById(R.id.circularImageView);
-            name=(TextView)itemView.findViewById(R.id.DoctorNameSearchList);
-            spicialist=(TextView)itemView.findViewById(R.id.DoctorspicialistSearchList);
+            name=(TextView)itemView.findViewById(R.id.MedicineNameCart);
+            spicialist=(TextView)itemView.findViewById(R.id.MedicineProviderCart);
             rate=(RatingBar)itemView.findViewById(R.id.ratingBar);
             fees=(TextView)itemView.findViewById(R.id.DoctorfeesSearchList);
         }
