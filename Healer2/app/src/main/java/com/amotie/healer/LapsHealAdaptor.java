@@ -1,6 +1,7 @@
 package com.amotie.healer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,13 @@ public class LapsHealAdaptor  extends RecyclerView.Adapter<LapsHealAdaptor.ViewH
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         LapsHealList lapsHealList=lapsHealLists.get(position);
         holder.imageView.setImageBitmap(lapsHealList.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),LapProfile.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

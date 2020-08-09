@@ -30,7 +30,7 @@ public class LapProfile extends AppCompatActivity {
         typeofExamination.setHasFixedSize(true);
         typeofExamination.setLayoutManager(layoutManager2);
         typesOfExaminations=new ArrayList<>();
-        TypesOfExamination typesOfExamination=new TypesOfExamination("PCR and Anti-boby for Covid-19");
+        TypesOfExamination typesOfExamination=new TypesOfExamination("Pboby CR and Anti-for Covid-19");
         typesOfExaminations.add(typesOfExamination);
          typesOfExamination=new TypesOfExamination("Complete Blood Count (CBC)");
         typesOfExaminations.add(typesOfExamination);

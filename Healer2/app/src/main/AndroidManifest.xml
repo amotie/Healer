@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".YourExaminations"
-            android:label="Your Examinations"></activity>
-        <activity android:name=".LapProfile">
-
-        </activity>
+        <activity android:name=".ExaminationItemDetales"></activity>
+        <activity
+            android:name=".YourExaminations"
+            android:label="Your Examinations" />
+        <activity android:name=".LapProfile"></activity>
         <activity android:name=".Settings" />
         <activity android:name=".CheckOut" />
         <activity android:name=".Cart" />
@@ -26,11 +26,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SignUp"
@@ -38,7 +34,13 @@
         <activity
             android:name=".Login"
             android:label="@string/login"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
